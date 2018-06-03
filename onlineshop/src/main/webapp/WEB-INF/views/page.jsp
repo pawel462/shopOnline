@@ -24,7 +24,7 @@
 <title>Online Shop - ${title}</title>
 
 <script>
-	windows.menu = '${title}';
+	window.menu = '${title}';
 </script>
 
 <!-- Bootstrap core CSS -->
@@ -62,9 +62,10 @@
 			<c:if test="${userClickContact == true }">
 				<%@include file="contact.jsp"%>
 			</c:if>
-			
+
 			<!-- Loading home when user click View Products -->
-			<c:if test="${userClickAllProducts== true or userClickCategoryProducts== true }">
+			<c:if
+				test="${userClickAllProducts== true or userClickCategoryProducts== true }">
 				<%@include file="listProducts.jsp"%>
 			</c:if>
 
@@ -74,12 +75,15 @@
 
 
 		<!-- Bootstrap core JavaScript -->
+		
 		<script src="${js}/jquery.js"></script>
 		<script src="${js}/bootstrap.bundle.min.js"></script>
 		<!-- moj kod javascript -->
-		<script src="${js}/myapp.js"></script>
+		<script src="${js}/jquerymy.js"></script>
+
 
 	</div>
+	
 </body>
 
 </html>
